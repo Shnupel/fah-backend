@@ -58,10 +58,21 @@ router.get('/getUser/:id', (req, res) => {
   return res.json(user)
 });
 
-router.get('/getUser/', (req, res) => {
+router.get('/getAllUsers/', (req, res) => {
   res.json({
     data: new Array(10).fill(user).map((user, index) => ({ ...user, id: index })),
   })
 })
+
+router.post('/addUser/', (req, res) => {
+  const user = req.body;
+  if (!user) { 
+     return res.status(404).send('Not Found');
+  }
+  console.log(user);
+  return res.json({
+    message: 'User added successfully',
+  })
+});
 
 module.exports = router;
