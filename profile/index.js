@@ -67,12 +67,35 @@ router.get('/getAllUsers/', (req, res) => {
 router.post('/addUser/', (req, res) => {
   const user = req.body;
   if (!user) { 
-     return res.status(404).send('Not Found');
+     return res.status(502).json({ message: 'cant create user' });
   }
   console.log(user);
   return res.json({
     message: 'User added successfully',
   })
 });
+
+router.get("/filters", (req, res) => {
+  res.json({
+    "filters": {
+      "institute": [
+        {
+          "Робототехника": 23
+        },
+        {
+          "МЛ": 34
+        }
+      ],
+      "position": [
+        {
+          "TA": 23
+        },
+        {
+          "Primary Instructor": 34
+        }
+      ]
+    }
+  })
+})
 
 module.exports = router;
