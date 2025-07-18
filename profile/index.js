@@ -59,14 +59,15 @@ router.get('/getUser/:id', (req, res) => {
 });
 
 router.get('/getAllUsers/', (req, res) => {
-  res.json({
+  console.log(req.query);
+  res.status(201).json({
     data: new Array(10).fill(user).map((user, index) => ({ ...user, id: index })),
   })
 })
 
 router.post('/addUser/', (req, res) => {
   const user = req.body;
-  if (!user) { 
+  if (!user) {
      return res.status(502).json({ message: 'cant create user' });
   }
   console.log(user);
@@ -76,7 +77,7 @@ router.post('/addUser/', (req, res) => {
 });
 
 router.get("/filters", (req, res) => {
-  res.json({
+  res.status(200).json({
     "filters": {
       "institute": [
         {
