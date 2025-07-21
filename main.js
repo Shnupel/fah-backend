@@ -1,6 +1,8 @@
 const express = require('express');
 const authRoutes = require('./auth');
+const courseRouter = require("./courses");
 const profileRoutes = require('./profile');
+const filtersRouter = require("./filters")
 const cookieParser = require('cookie-parser');
 const cors = require("cors");
 
@@ -28,3 +30,7 @@ app.get("/", (req, res) => res.send("Hello world"));
 app.use('/api/auth', authRoutes);
 
 app.use('/api/profile', profileRoutes);
+
+app.use("/api/academic", courseRouter);
+
+app.use("/api/filters", filtersRouter);

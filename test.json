@@ -1,0 +1,55 @@
+{
+    "year": 0,
+    "name_eng": "string",
+    "name_ru": "string",
+    "alias": "string",
+    "email": "string",
+    "position_name": "string",
+    "institute_names": [
+      "string"
+    ],
+    "student_type": "string",
+    "degree": true,
+    "fsro": "string",
+    "languages": [
+      {
+        "language_code": "string"
+      }
+    ],
+    "employnment_type": "string",
+    "hiring_status": "string",
+    "mode": "string",
+    "max_load": 0,
+    "frontal_hours": 0,
+    "extra_activities": 0,
+    "workload_stats": {
+      "t1": {
+        "lec_hours": 0,
+        "tut_hours": 0,
+        "lab_hours": 0,
+        "elective_hours": 0,
+        "rate": 0
+      },
+      "t2": {
+        "lec_hours": 0,
+        "tut_hours": 0,
+        "lab_hours": 0,
+        "elective_hours": 0,
+        "rate": 0
+      },
+      "t3": {
+        "lec_hours": 0,
+        "tut_hours": 0,
+        "lab_hours": 0,
+        "elective_hours": 0,
+        "rate": 0
+      },
+      "total": {
+        "lec_hours": 0,
+        "tut_hours": 0,
+        "lab_hours": 0,
+        "elective_hours": 0,
+        "rate": 0
+      }
+    }
+  }
